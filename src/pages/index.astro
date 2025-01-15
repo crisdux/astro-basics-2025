@@ -1,6 +1,9 @@
 ---
+// este codigo js solo se ejecuta en desarrollo y se transforma solo a html para el build del proyecto
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+
+const name = "Cristian Fernando Villca"
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -8,4 +11,18 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<Welcome />
+	<main>
+		<!-- esto se actualiza en desarrollo -->
+		<!-- en produccion no mandamos naad de js al cliente -->
+		<p>Momento actual: {new Date().toLocaleString()}</p> 
+
+
+		<p id="current-year">Momento actual real: </p>
+
+		este script si se ejecuta en el cliente y si se ejecuta 
+		<script>
+			const parrafo = document.getElementById("current-year") as HTMLParagraphElement;
+			parrafo.innerText = `Momento actual real: ${new Date().toLocaleTimeString()}`
+		</script>
+	</main>
 </Layout>
