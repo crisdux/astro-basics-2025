@@ -1,11 +1,5 @@
 ---
-import NavBar from "../components/NavBar.astro";
 
-interface Props {
-	title:string;
-}
-
-const {title} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -13,10 +7,13 @@ const {title} = Astro.props;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
+    <title>Document</title>
 </head>
 <body>
-	<NavBar />
-	<slot/ >
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>    
 </body>
 </html>
