@@ -1,5 +1,4 @@
 ---
-import NavBar from '../components/NavBar.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +6,18 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About Page">
-	<h1>About</h1>
+	<h1 class="title">About</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, commodi!</p>
 </Layout>
+
+<style>
+	.title {
+		font-size: 3rem;
+		color:red;
+		border: 1px solid black;
+	}
+
+	p {
+		color:green;
+	}
+</style>
